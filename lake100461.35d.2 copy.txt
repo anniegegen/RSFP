@@ -1,0 +1,142 @@
+ENV.2.1                    : Data Processing Version ID
+100461 Mead                : Target database id number and name
+ 36.210 245.680            : Latitude and longitude (degrees East) of target mid-point
+ 36.363  36.383            : Latitude range of pass traversing target at which data is accepted
+811     406                : Satellite pass and revolution number designation
+          7                : Reference pass derived from ENVISAT cycle #
+          1                : Reference pass tracker mode (ocean=0, ice1=1, ice2=2, sea ice=3)
+  N/A                      : N/A Bias
+  N/A                      : N/A Bias
+  N/A                      : N/A Bias
+c                                                                                         
+c   Mean target height along the Reference Profile:                                       
+c     (i.e. geodetic height wrt Topex ellipsoid)                                          
+c     mean  = 326.43 m  std  = 0.03 m                                                     
+c                                                                                         
+c                                                                                         
+c   Shift from Topex ellipsoid to WGS84 ellipsoid:                                        
+c     mean  = 0.70 m                                                                      
+c                                                                                         
+c                                                                                         
+c   Geoid height along the Reference Profile:                                             
+c     EGM96    mean  = -28.19 m  std  = 0.01 m                                            
+c     EGM2008  mean  = -27.62 m  std  = 0.01 m                                            
+c     EIGEN6C4 mean  = -27.61 m  std  = 0.01 m                                            
+c                                                                                         
+c                                                                                         
+c   !! CONVERSION FACTORS !!                                                              
+c     (to shift from satellite product datum to an orthometric/mean sea level datum)      
+c     (ADD this value to each elevation in the target product)                            
+c     EGM96     = 353.92 m  std  = 0.03 m                                                 
+c     EGM2008   = 353.34 m  std  = 0.04 m                                                 
+c     EIGEN6C4  = 353.34 m  std  = 0.04 m                                                 
+c                                                                                         
+Column 1: Satellite mission name
+Column 2: Satellite repeat cycle
+Column 3: Calendar year/month/day of along track observations traversing target
+Column 4: Hour of day at mid point of along track pass traversing target
+Column 5: Minutes of hour at mid point of along track pass traversing target
+Column 6: Target height variation with respect to ENVISAT reference pass mean level (meters, default=999.99)
+Column 7: Estimated error of target height variation with respect to reference mean level (meters, default=99.999)
+Column 8: Mean along track Ku-band backscatter coefficient (decibels, default=999.99)
+Column 9: Wet tropospheric correction applied to range observation (RAD=ENVISAT radiometer, ECM=ECMWF Operational model, MIX=combination, U/A=unavailable, N/A=not applicable)
+Column 10: Ionosphere correction applied to range observation (GIM=GPS model, U/A=unavailable, N/A=not applicable)
+Column 11: Dry tropospheric correction applied to range observation (ECM=ECMWF Operational model, U/A=unavailable, N/A=not applicable)
+Column 12: Instrument operating mode 1 (default=9)
+Column 13: Instrument operating mode 2 (default=9)
+Column 14: Flag for potential frozen surface (ice-on=1, ice-off or unknown=0)
+Column 15: Target height variation in EGM2008 datum (meters above mean sea level, default=9999.99)
+Column 16: Flag for ENVISAT data source (GDR=0)
+ENVI    1 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI    2 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI    3 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI    4 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI    5 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI    6 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI    7 20020716   5 12    0.00  0.042   6.03 RAD GIM ECM 9 9 0   353.34   0
+ENVI    8 20020820   5 12   -0.44  0.044  10.45 RAD GIM ECM 9 9 0   352.90   0
+ENVI    9 20020924   5 12   -0.91  0.054  29.32 RAD GIM ECM 9 9 0   352.43   0
+ENVI   10 20021029   5 12   -1.16  0.047  13.83 RAD GIM ECM 9 9 0   352.18   0
+ENVI   11 20021203   5 12   -1.54  0.071  29.49 RAD GIM ECM 9 9 0   351.80   0
+ENVI   12 20030107   5 12   -1.97  0.048  14.22 RAD GIM ECM 9 9 0   351.37   0
+ENVI   13 20030211   5 12   -1.41  0.045  28.50 RAD GIM ECM 9 9 0   351.93   0
+ENVI   14 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI   15 20030422   5 12   -2.55  0.044  12.58 RAD GIM ECM 9 9 0   350.79   0
+ENVI   16 20030527   5 12   -3.63  0.043  50.29 RAD GIM ECM 9 9 0   349.71   0
+ENVI   17 20030701   5 12   -5.01  0.045  21.07 RAD GIM ECM 9 9 0   348.33   0
+ENVI   18 20030805   5 12   -5.12  0.077  16.09 RAD GIM ECM 9 9 0   348.22   0
+ENVI   19 20030909   5 12   -4.76  0.043  16.36 RAD GIM ECM 9 9 0   348.58   0
+ENVI   20 20031014   5 12   -4.99  0.086  15.00 RAD GIM ECM 9 9 0   348.35   0
+ENVI   21 20031118   5 12   -5.79  0.059  18.46 RAD GIM ECM 9 9 0   347.55   0
+ENVI   22 20031223   5 12   -6.28  0.123  19.18 RAD GIM ECM 9 9 0   347.06   0
+ENVI   23 20040127   5 12   -5.83  0.059  22.12 RAD GIM ECM 9 9 0   347.51   0
+ENVI   24 20040302   5 12   -6.17  0.061  19.35 RAD GIM ECM 9 9 0   347.17   0
+ENVI   25 20040406   5 12   -6.51  0.129  21.67 RAD GIM ECM 9 9 0   346.83   0
+ENVI   26 20040511   5 12   -7.66  0.054  12.25 RAD GIM ECM 9 9 0   345.68   0
+ENVI   27 20040615   5 12   -9.14  0.044  14.94 RAD GIM ECM 9 9 0   344.20   0
+ENVI   28 20040720   5 12   -9.83  0.064  17.65 RAD GIM ECM 9 9 0   343.51   0
+ENVI   29 20040824   5 12   -9.58  0.055  13.24 RAD GIM ECM 9 9 0   343.76   0
+ENVI   30 20040928   5 12   -9.93  0.050  15.16 RAD GIM ECM 9 9 0   343.41   0
+ENVI   31 20041102   5 12   -9.74  0.073  15.73 RAD GIM ECM 9 9 0   343.60   0
+ENVI   32 20041207   5 12   -9.47  0.140  19.05 RAD GIM ECM 9 9 0   343.87   0
+ENVI   33 20050111   5 12   -8.85  0.077  24.27 RAD GIM ECM 9 9 0   344.49   0
+ENVI   34 20050215   5 12   -5.89  0.065  22.45 RAD GIM ECM 9 9 0   347.45   0
+ENVI   35 20050322   5 12   -3.95  0.092  20.69 RAD GIM ECM 9 9 0   349.39   0
+ENVI   36 20050426   5 12   -5.32  0.378  30.84 RAD GIM ECM 9 9 0   348.02   0
+ENVI   37 20050531   5 12   -5.26  0.055  28.89 RAD GIM ECM 9 9 0   348.08   0
+ENVI   38 20050705   5 12   -5.59  0.044  15.68 RAD GIM ECM 9 9 0   347.75   0
+ENVI   39 20050809   5 12   -6.35  0.067  19.73 RAD GIM ECM 9 9 0   346.99   0
+ENVI   40 20050913   5 12   -5.59  0.161  32.98 RAD GIM ECM 9 9 0   347.75   0
+ENVI   41 20051018   5 12   -6.68  0.051  13.92 RAD GIM ECM 9 9 0   346.66   0
+ENVI   42 20051122   5 12   -7.04  0.057  25.09 RAD GIM ECM 9 9 0   346.30   0
+ENVI   43 20051227   5 12   -6.44  0.047  21.53 RAD GIM ECM 9 9 0   346.90   0
+ENVI   44 20060131   5 12  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+ENVI   45 20060307   5 12   -5.47  0.045  14.72 RAD GIM ECM 9 9 0   347.87   0
+ENVI   46 20060411   5 12   -6.40  0.072  16.67 RAD GIM ECM 9 9 0   346.94   0
+ENVI   47 20060516   5 12   -7.83  0.095  22.45 RAD GIM ECM 9 9 0   345.51   0
+ENVI   48 20060620   5 12   -8.89  0.049  13.82 RAD GIM ECM 9 9 0   344.45   0
+ENVI   49 20060725   5 12   -9.79  0.091  21.56 RAD GIM ECM 9 9 0   343.55   0
+ENVI   50 20060829   5 12   -9.25  0.056  40.48 RAD GIM ECM 9 9 0   344.09   0
+ENVI   51 20061003   5 12   -9.85  0.048  49.98 RAD GIM ECM 9 9 0   343.49   0
+ENVI   52 20061107   5 12   -9.56  0.047  41.74 RAD GIM ECM 9 9 0   343.78   0
+ENVI   53 20061212   5 12   -9.96  0.064  22.64 RAD GIM ECM 9 9 0   343.38   0
+ENVI   54 20070116   5 12   -9.14  0.061  14.01 RAD GIM ECM 9 9 0   344.20   0
+ENVI   55 20070220   5 12   -8.63  0.045  13.20 RAD GIM ECM 9 9 0   344.71   0
+ENVI   56 20070327   5 12   -9.62  0.050  11.88 RAD GIM ECM 9 9 0   343.72   0
+ENVI   57 20070501   5 12  -11.36  0.085  21.30 RAD GIM ECM 9 9 0   341.98   0
+ENVI   58 20070605   5 12  -12.90  0.056  15.64 RAD GIM ECM 9 9 0   340.44   0
+ENVI   59 20070710   5 12  -13.63  0.044  16.67 RAD GIM ECM 9 9 0   339.71   0
+ENVI   60 20070814   5 12  -14.15  0.066  17.44 RAD GIM ECM 9 9 0   339.19   0
+ENVI   61 20070918   5 12  -14.33  0.050  14.56 RAD GIM ECM 9 9 0   339.01   0
+ENVI   62 20071023   5 12  -14.60  0.095  21.14 RAD GIM ECM 9 9 0   338.74   0
+ENVI   63 20071127   5 12  -14.70  0.067  23.15 RAD GIM ECM 9 9 0   338.64   0
+ENVI   64 20080101   5 12  -13.48  0.062  14.73 RAD GIM ECM 9 9 0   339.86   0
+ENVI   65 20080205   5 12  -12.78  0.060  16.86 RAD GIM ECM 9 9 0   340.56   0
+ENVI   66 20080311   5 12  -11.98  0.042  51.48 RAD GIM ECM 9 9 0   341.36   0
+ENVI   67 20080415   5 12  -13.72  0.055  13.33 RAD GIM ECM 9 9 0   339.62   0
+ENVI   68 20080520   5 12  -15.07  0.078  25.45 RAD GIM ECM 9 9 0   338.27   0
+ENVI   69 20080624   5 12  -16.07  0.058  13.35 RAD GIM ECM 9 9 0   337.27   0
+ENVI   70 20080729   5 12  -16.25  0.044  14.67 RAD GIM ECM 9 9 0   337.09   0
+ENVI   71 20080902   5 12  -16.23  0.055  15.12 RAD GIM ECM 9 9 0   337.11   0
+ENVI   72 20081007   5 12  -15.79  0.074  16.79 RAD GIM ECM 9 9 0   337.55   0
+ENVI   73 20081111   5 12  -15.20  0.054  20.50 RAD GIM ECM 9 9 0   338.14   0
+ENVI   74 20081216   5 12  -15.08  0.046  11.80 RAD GIM ECM 9 9 0   338.26   0
+ENVI   75 20090120   5 12  -14.22  0.053  21.27 RAD GIM ECM 9 9 0   339.12   0
+ENVI   76 20090224   5 12  -13.88  0.046  51.69 RAD GIM ECM 9 9 0   339.46   0
+ENVI   77 20090331   5 12  -15.46  0.047  20.21 RAD GIM ECM 9 9 0   337.88   0
+ENVI   78 20090505   5 12  -17.20  0.042  48.19 RAD GIM ECM 9 9 0   336.14   0
+ENVI   79 20090609   5 12  -18.77  0.061  16.33 RAD GIM ECM 9 9 0   334.57   0
+ENVI   80 20090714   5 12  -19.05  0.047  15.75 RAD GIM ECM 9 9 0   334.29   0
+ENVI   81 20090818   5 12  -19.22  0.044  51.71 RAD GIM ECM 9 9 0   334.12   0
+ENVI   82 20090922   5 12  -19.54  0.045  13.49 RAD GIM ECM 9 9 0   333.80   0
+ENVI   83 20091027   5 12  -19.63  0.118  35.45 RAD GIM ECM 9 9 0   333.71   0
+ENVI   84 20091201   5 12  -19.57  0.044  20.98 RAD GIM ECM 9 9 0   333.77   0
+ENVI   85 20100105   5 12  -18.80  0.101  25.76 RAD GIM ECM 9 9 0   334.54   0
+ENVI   86 20100209   5 12  -17.17  0.043  49.82 RAD GIM ECM 9 9 0   336.17   0
+ENVI   87 20100316   5 12  -16.89  0.043  48.09 RAD GIM ECM 9 9 0   336.45   0
+ENVI   88 20100420   5 12  -17.75  0.052  41.09 RAD GIM ECM 9 9 0   335.59   0
+ENVI   89 20100525   5 12  -18.86  0.048  39.16 RAD GIM ECM 9 9 0   334.48   0
+ENVI   90 20100629   5 12  -20.75  0.046  15.41 RAD GIM ECM 9 9 0   332.59   0
+ENVI   91 20100803   5 12  -21.65  0.094  17.06 RAD GIM ECM 9 9 0   331.69   0
+ENVI   92 20100907   5 12  -21.58  0.052  31.28 RAD GIM ECM 9 9 0   331.76   0
+ENVI   93 20101012   5 12  -22.66  0.044  26.91 RAD GIM ECM 9 9 0   330.68   0
